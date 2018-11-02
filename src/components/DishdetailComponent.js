@@ -20,7 +20,7 @@ class Dishdetail extends Component {
                     </p>
                 </li>
             )
-        })
+        });
         return (
             <div className='col-12 col-md-5 m-1'>
                 <h4> Comments </h4>
@@ -46,17 +46,18 @@ class Dishdetail extends Component {
             )
         } else {
             return (
-                <div/>)
+                <div/>
+            )
         }
-    }
+    };
 
     render() {
-        const dish = this.props.dish
+        const dish = this.props.dish;
         if (dish == null) {
             return (<div/>)
         }
-        const dishItem = this.renderDish(dish)
-        const commentItem = this.renderComments(dish.comments)
+        const dishItem = this.renderDish(dish);
+        const commentItem = this.renderComments(dish.comments);
         return (
             <div className='row'>
                 {dishItem}
